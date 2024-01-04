@@ -1,10 +1,13 @@
 const DEFAULT_SIZE = 16;
 
 const grid = document.getElementById("grid");
-const square = document.querySelectorAll(".square"); 
-const colorButton = document.querySelector(".color"); 
-const sizeButton = document.querySelector(".size"); 
-const eraseButton = document.querySelector(".erase"); 
+const colorButton = document.getElementById("color"); 
+const sizeButton = document.getElementById("size"); 
+const eraseButton = document.getElementById("erase"); 
+
+eraseButton.addEventListener("click", () => {
+    eraseGrid();
+}); 
 
 // Create grid 
 function createGrid(size) {
@@ -23,7 +26,14 @@ function createGrid(size) {
     }
 }
 
+// Erase grid 
+function eraseGrid() { 
+    const square = document.querySelectorAll(".square"); 
+    square.forEach(square => square.style.backgroundColor = "#d4d4d4"); 
+}
+
 // Once DOM is loaded, create grid 
 document.addEventListener("DOMContentLoaded", function () {
    createGrid(DEFAULT_SIZE); 
 });
+
