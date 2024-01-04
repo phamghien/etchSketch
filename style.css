@@ -33,7 +33,15 @@ body{
     position: relative; 
     text-align: center;
     color: black; 
-    
+    border: 2px solid transparent; 
+}
+
+.button-container:hover { 
+    border: 2px solid red; 
+    border-radius: 150px;
+    box-shadow: 4px 4px 4px red;
+
+
 }
 
 .button-text {
