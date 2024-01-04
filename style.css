@@ -40,8 +40,12 @@ body{
     border: 2px solid red; 
     border-radius: 150px;
     box-shadow: 4px 4px 4px red;
+}
 
-
+.button-container.active{ 
+    border: 2px solid red; 
+    border-radius: 150px;
+    box-shadow: 4px 4px 4px red;
 }
 
 .button-text {
