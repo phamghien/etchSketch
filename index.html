@@ -3,7 +3,7 @@
 <html lang="en"> 
     <head> 
         <meta charset="UTF-8">
-        <title>Rock, Paper, Scissors</title>
+        <title>etch-a-sketch</title>
         <script src ="script.js" async></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -12,6 +12,26 @@
             <h1 class="title">etch-a-sketch</h1>
         </header>
         <main class="main">
+            <div class="settings">
+                <div class="button-container">
+                    <button id="size" style="border: 0; background: transparent">
+                        <img src="https://cdn.pixabay.com/photo/2013/07/12/18/40/button-153683_1280.png" width="90" height="90" alt="size" />
+                        <div class="button-text">Size</div>
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button id="color" style="border: 0; background: transparent">
+                        <img src="https://cdn.pixabay.com/photo/2013/07/12/18/40/button-153683_1280.png" width="90" height="90" alt="color" />
+                        <div class="button-text">Color</div>
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button id="erase" style="border: 0; background: transparent">
+                        <img src="https://cdn.pixabay.com/photo/2013/07/12/18/40/button-153683_1280.png" width="90" height="90" alt="erase" />
+                        <div class="button-text">Erase</div>
+                    </button>
+                </div>
+            </div>
             <div id="grid" class="grid"> </div>
         </main>
 
