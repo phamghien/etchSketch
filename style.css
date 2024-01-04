@@ -1,0 +1,30 @@
+
+body{
+    color: black; 
+}
+
+.header {
+    padding: 20x; 
+}
+
+.title {
+    text-align: center; 
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    margin: 0 auto;
+  }
+
+.grid {
+    display: grid; 
+    width: 500px; 
+    height: 500px; 
+    background-color: #d4d4d4;
+    border-radius: 25px;
+    border: 50px solid #ff0505;
+    padding: 20px;
+}
