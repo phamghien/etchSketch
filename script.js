@@ -1,5 +1,6 @@
 
 let colorMode = 1; 
+let sizeMode = 0; 
 let colorChoice = "#000000"
 const DEFAULT_SIZE = 16;
 const grid = document.getElementById("grid");
@@ -7,6 +8,7 @@ const colorButton = document.getElementById("color");
 const sizeButton = document.getElementById("size"); 
 const eraseButton = document.getElementById("erase"); 
 
+// Button click event listeners 
 eraseButton.addEventListener("click", () => {
     eraseGrid();
 }); 
@@ -15,6 +17,10 @@ colorButton.addEventListener("click", () => {
     changeColorMode();
 }); 
 
+sizeButton.addEventListener("click", () => {
+    eraseGrid(); 
+    setGrid();
+}); 
 
 // Create grid 
 function createGrid(size) {
@@ -54,6 +60,7 @@ function changeColorMode() {
     }
 }
 
+// Get random color 
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -61,6 +68,30 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Change grid modes when button is clicked 
+function gridMode(sizeMode) {
+    switch(sizeMode) {
+        case 0: 
+            size = 16; 
+            break; 
+        case 1: 
+            size = 32; 
+            break; 
+        case 2: 
+            size = 64; 
+            break; 
+    }
+}
+
+function setGrid() {
+    if (sizeMode >= 2) {
+        sizeMode = 0
+    } else {
+        sizeMode++;
+    }
+    gridMode(sizeMode);
+    createGrid(size);
+}
 
 // Once DOM is loaded, create grid 
 document.addEventListener("DOMContentLoaded", function () {
